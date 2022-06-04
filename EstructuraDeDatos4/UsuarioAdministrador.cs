@@ -133,7 +133,7 @@ namespace EstructuraDeDatos4
 			{
 				VerPersona();
 				Console.WriteLine("\n Usted digitó el Documento *" + documento + "*");
-				Console.WriteLine("\n Ya existe una persona con ese Documento");
+				Console.WriteLine("\n Ya existe una Persona con ese Documento");
 				Console.WriteLine("\n Será direccionado nuevamente al Menú para que lo realice correctamente");
 				Validador.VolverMenu();
 
@@ -170,7 +170,7 @@ namespace EstructuraDeDatos4
 				}
 			}
 			VerPersona();
-			Console.WriteLine("Se ha grabado los datos de las personas en la Agenda correctamente");
+			Console.WriteLine("Se ha grabado los datos de las Personas correctamente");
 			Validador.VolverMenu();
 
 		}
@@ -178,7 +178,7 @@ namespace EstructuraDeDatos4
 		protected override void LeerPersona()
 		{
 			Console.Clear();
-			Console.WriteLine("\n Personas en la agenda: ");
+			Console.WriteLine("\n Personas: ");
 			using (var archivoLista = new FileStream("archivoLista.txt", FileMode.Open))
 			{
 				using (var archivoLecturaAgenda = new StreamReader(archivoLista))
@@ -277,7 +277,7 @@ namespace EstructuraDeDatos4
 		public void VerPersona()
 		{
 			Console.Clear();
-			Console.WriteLine("\n Personas en Agenda");
+			Console.WriteLine("\n Personas: ");
 			Console.WriteLine(" #\t\tDocumento.\t\tNombre.\t\tApellido.");
 			for (int i = 0; i < Persona.Count; i++)
 			{
